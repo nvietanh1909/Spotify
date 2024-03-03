@@ -40,7 +40,7 @@ public class ListAlbumHorizontalAdapter extends RecyclerView.Adapter {
         ListAlbumHorizontalViewHolder listAlbumHorizontalViewHolder = (ListAlbumHorizontalViewHolder) holder;
         listAlbumHorizontalViewHolder.textViewName.setText(item.getAlbum());
         //Avatar
-//        listAlbumHorizontalViewHolder.imageViewAvatar.setImageBitmap(Utils.loadBitMapFormAssets(context, item.getAlbum(), "img_album"));
+        listAlbumHorizontalViewHolder.imageViewAvatar.setImageBitmap(Utils.loadBitMapFormAssets(context, item.getAlbumArt(), "img_album"));
     }
 
     @Override

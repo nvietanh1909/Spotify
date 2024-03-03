@@ -15,7 +15,7 @@
         android:title="Thư viện" />
     <item
         android:id="@+id/bottomItemChat"
-        android:icon="@drawable/ic_chat"
+        android:icon="@drawable/baseline_workspace_premium_24"
         android:title="Premium" />
 
 </menu>

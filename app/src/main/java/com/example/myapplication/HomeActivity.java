@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.myapplication.classes.Song;
 import com.example.myapplication.fragment.GetAppFragment;
 import com.example.myapplication.fragment.HomeFragment;
 import com.example.myapplication.fragment.LibraryFragment;
@@ -23,6 +24,8 @@ import com.example.myapplication.fragment.SearchFragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
@@ -115,6 +118,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void addEvents() {
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

@@ -2,7 +2,6 @@ package com.example.myapplication.fragment;
 
 import android.os.Bundle;
 
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,13 +18,13 @@ import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ListAlbumHorizontalFragment#newInstance} factory method to
+ * Use the {@link ReplayHorizontalFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ListAlbumHorizontalFragment extends Fragment {
+public class ReplayHorizontalFragment extends Fragment {
+
     ArrayList<Song> songArrayList;
     RecyclerView recyclerView;
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -35,7 +34,7 @@ public class ListAlbumHorizontalFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ListAlbumHorizontalFragment() {
+    public ReplayHorizontalFragment() {
         // Required empty public constructor
     }
 
@@ -45,11 +44,11 @@ public class ListAlbumHorizontalFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ListAlbumHorizontalFragment.
+     * @return A new instance of fragment ReplayHorizontalFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ListAlbumHorizontalFragment newInstance(String param1, String param2) {
-        ListAlbumHorizontalFragment fragment = new ListAlbumHorizontalFragment();
+    public static ReplayHorizontalFragment newInstance(String param1, String param2) {
+        ReplayHorizontalFragment fragment = new ReplayHorizontalFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,6 +65,17 @@ public class ListAlbumHorizontalFragment extends Fragment {
         }
         initSampleData();
     }
+    private void initSampleData() {
+        songArrayList = new ArrayList<Song>();
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -75,14 +85,5 @@ public class ListAlbumHorizontalFragment extends Fragment {
         recyclerView.setAdapter(listAlbumHorizontalFragment);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         return view;
-    }
-
-    void initSampleData(){
-        songArrayList = new ArrayList<Song>();
-        songArrayList.add(new Song("", "Obito", "Đánh đổi", 300, "Gen Z", "", "obito.jpg"));
-        songArrayList.add(new Song("", "Wren Evans", "Loi Choi", 300, "Gen Z", "", "wrenevans.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Tlinh", "Ái", 300, "Gen Z", "", "tlinh.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
     }
 }

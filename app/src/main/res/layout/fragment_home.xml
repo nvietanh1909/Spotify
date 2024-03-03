@@ -56,5 +56,20 @@
             android:id="@+id/frameLayoutHorizontalReplay"
             android:layout_width="match_parent"
             android:layout_height="210dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Radio"
+            android:textColor="@color/text_white_color"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/frameLayoutHorizontalRadio"
+            android:layout_width="match_parent"
+            android:layout_height="210dp" />
     </LinearLayout>
 </ScrollView>

@@ -48,7 +48,6 @@ public class HomeFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,23 +63,35 @@ public class HomeFragment extends Fragment {
         addHorizontal();
         addHorizontalSuggest();
         addHorizontalReplay();
+        addHorizontalRadio();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
+
+        // Trong phương thức onCreateView hoặc onViewCreated của fragment hiện tại
+
     }
+
+
     void addHorizontal(){
         Fragment childFragment = new ListAlbumHorizontalFragment();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.frameLayoutHorizontal, childFragment).commit();
     }
     void addHorizontalSuggest(){
-        Fragment childFragment = new ListAlbumHorizontalFragment();
+        Fragment childFragment = new SuggestHorizontalFragment();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.frameLayoutHorizontalSuggest, childFragment).commit();
     }
 
     void addHorizontalReplay(){
-        Fragment childFragment = new ListAlbumHorizontalFragment();
+        Fragment childFragment = new ReplayHorizontalFragment();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.frameLayoutHorizontalReplay, childFragment).commit();
+    }
+
+    void addHorizontalRadio(){
+        Fragment childFragment = new RadioHorizontalFragment();
+        FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+        transaction.replace(R.id.frameLayoutHorizontalRadio, childFragment).commit();
     }
 }
