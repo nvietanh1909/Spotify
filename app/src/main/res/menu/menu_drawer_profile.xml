@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/grp1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <item
+            android:id="@+id/mnDrawerHomeChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:iconTint="#FFFFFF"
+            android:title="Nội dung mới" />
+        <item
+            android:id="@+id/mnDrawerHomeCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:iconTint="#FFFFFF"
+            android:title="Nội dung đã nghe" />
+        <item
+            android:id="@+id/mnDrawerHomePeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:iconTint="#FFFFFF"
+            android:title="Cài đặt quyền riêng tư" />
+    </group>
+    <group
+        android:id="@+id/grp2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <item
+            android:id="@+id/mnDrawerHomeLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="Đăng xuất" />
+    </group>
+</menu>

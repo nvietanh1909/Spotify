@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#1ED760</color>
+    <color name="nav_bottom_background">#121212</color>
+    <color name="nav_bottom_icon_color">#B4B4B4</color>
+    <color name="background_color">#131313</color>
+    <color name="text_white_color">#FEFEFE</color>
+    <color name="app_main_bg">#1877F2</color>
+    <color name="gray_light">#959595</color>
+    <color name="clear">#00000000</color>
+    <color name="background">#121212</color>
+    <color name="text">#ffff</color>
+    <color name="colorPrimary">#282828</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#4DD05D</color>
+    <color name="themeColor">#282828</color>
+    <color name="active_tab_color">#ffffff</color>
+    <color name="inactive_tab_color">#777777</color>
+    <color name="list_text_secondary">#afafaf</color>
+    <color name="grey">#a5a5a5</color>
+</resources>
