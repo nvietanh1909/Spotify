@@ -67,13 +67,12 @@ public class RadioHorizontalFragment extends Fragment {
     }
     private void initSampleData() {
         songArrayList = new ArrayList<Song>();
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
-
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
     }
 
     @Override

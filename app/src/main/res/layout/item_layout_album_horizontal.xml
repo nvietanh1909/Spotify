@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="12dp"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageViewHorizontalAvatar"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:src="@drawable/obito" />
 
     <TextView

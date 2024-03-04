@@ -70,11 +70,6 @@ public class HomeActivity extends AppCompatActivity {
                 for (int i = 0; i < size; i++) {
                     myNavigation.getMenu().getItem(i).setChecked(false);
                 }
-
-                if(item.getItemId() == R.id.mnDrawerHomeChat) {
-                    // Do Something
-                }
-
                 if(item.getItemId() == R.id.mnDrawerHomeLogout) {
                     finish();
                 }

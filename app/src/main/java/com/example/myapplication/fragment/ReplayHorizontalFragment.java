@@ -67,12 +67,15 @@ public class ReplayHorizontalFragment extends Fragment {
     }
     private void initSampleData() {
         songArrayList = new ArrayList<Song>();
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
+        songArrayList.add(new Song("", "", "NIETPO", 300, "Gen Z", "", "nietpo.jpg"));
     }
 
 

@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.LibraryFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:layout_gravity="center"
+    tools:context="library">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="50sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:text="Trang thư viện" />
+        android:orientation="vertical">
 
+        <Button
+            android:id="@+id/btnThemNgheSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Thêm Nghệ Sĩ"
+            app:icon="@drawable/baseline_add_24" />
+
+        <Button
+            android:id="@+id/btnPortcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Thêm Postcast và chương trình"
+            app:icon="@drawable/baseline_add_24" />
+    </LinearLayout>
 </FrameLayout>
