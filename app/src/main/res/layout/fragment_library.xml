@@ -6,10 +6,22 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     tools:context="library">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Your Library"
+            app:menu="@menu/menu_optionadd"
+            app:titleTextColor="@color/white" />
 
         <Button
             android:id="@+id/btnThemNgheSi"
