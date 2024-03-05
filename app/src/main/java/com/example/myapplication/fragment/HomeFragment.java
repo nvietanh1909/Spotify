@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -68,12 +69,7 @@ public class HomeFragment extends Fragment {
         addHorizontalRadio();
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
-
-        // Trong phương thức onCreateView hoặc onViewCreated của fragment hiện tại
-
     }
-
-
     void addHorizontal(){
         Fragment childFragment = new ListAlbumHorizontalFragment();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();

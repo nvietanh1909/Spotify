@@ -1,0 +1,21 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Bold">
+        <item name="android:fontFamily">@font/gotham_bold</item>
+        <item name="fontFamily">@font/gotham_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text</item>
+
+    </style>
+    <style name="Regular">
+        <item name="android:fontFamily">@font/gotham_book</item>
+        <item name="fontFamily">@font/gotham_book</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/gotham_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>
