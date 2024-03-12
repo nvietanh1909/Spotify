@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class ListAlbumHorizontalAdapter extends RecyclerView.Adapter {
     ArrayList<Song> songArrayList;
+    private OnItemClickListener listener;
     Context context;
 
     public ListAlbumHorizontalAdapter(ArrayList<Song> songArrayList, Context context) {
@@ -41,6 +42,19 @@ public class ListAlbumHorizontalAdapter extends RecyclerView.Adapter {
         listAlbumHorizontalViewHolder.textViewName.setText(item.getAlbum());
         //Avatar
         listAlbumHorizontalViewHolder.imageViewAvatar.setImageBitmap(Utils.loadBitMapFormAssets(context, item.getAlbumArt(), "img_album"));
+
+        final Song currentSong = songArrayList.get(position);
+
+        // ...
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onItemClick(currentSong);
+                }
+            }
+        });
     }
 
     @Override
@@ -56,5 +70,11 @@ public class ListAlbumHorizontalAdapter extends RecyclerView.Adapter {
             imageViewAvatar = itemView.findViewById(R.id.imageViewHorizontalAvatar);
             textViewName = itemView.findViewById(R.id.textViewHorizontalItem);
         }
+    }
+    public interface OnItemClickListener {
+        void onItemClick(Song song);
+    }
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
     }
 }

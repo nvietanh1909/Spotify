@@ -1,5 +1,6 @@
 package com.example.myapplication.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -73,6 +74,23 @@ public class ListAlbumHorizontalFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerViewHorizontal);
         ListAlbumHorizontalAdapter listAlbumHorizontalFragment = new ListAlbumHorizontalAdapter(songArrayList, getContext());
         recyclerView.setAdapter(listAlbumHorizontalFragment);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        listAlbumHorizontalFragment.setOnItemClickListener(new ListAlbumHorizontalAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Song song) {
+                // Xử lý sự kiện click ở đây
+                 Intent intent = new Intent(getContext(), DetailMusicActivity.class);
+                 intent.putExtra("song_id", song.getAlbum());
+                 startActivity(intent);
+            }
+        });
+        recyclerView.setAdapter(listAlbumHorizontalFragment);
+
+        // Đặt adapter cho RecyclerView
+        recyclerView.setAdapter(listAlbumHorizontalFragment);
+
+        // Thiết lập LayoutManager cho RecyclerView (nếu cần)
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         return view;
     }
