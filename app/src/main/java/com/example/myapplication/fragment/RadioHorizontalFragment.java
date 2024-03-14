@@ -69,13 +69,13 @@ public class RadioHorizontalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_list_album_horizontal, container, false);
+        View view = inflater.inflate(R.layout.fragment_radio_horizontal, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewHorizontal);
-        ListAlbumHorizontalAdapter radioHorizontalFragment = new ListAlbumHorizontalAdapter(songArrayList, getContext());
-        recyclerView.setAdapter(radioHorizontalFragment);
+        ListAlbumHorizontalAdapter radioHorizontalAdapter = new ListAlbumHorizontalAdapter(songArrayList, getContext());
+        recyclerView.setAdapter(radioHorizontalAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
-        radioHorizontalFragment.setOnItemClickListener(new ListAlbumHorizontalAdapter.OnItemClickListener() {
+        radioHorizontalAdapter.setOnItemClickListener(new ListAlbumHorizontalAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Song song) {
                 // Xử lý sự kiện click ở đây

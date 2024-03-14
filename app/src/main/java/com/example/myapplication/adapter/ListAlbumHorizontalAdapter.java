@@ -75,6 +75,7 @@ public class ListAlbumHorizontalAdapter extends RecyclerView.Adapter {
         void onItemClick(Song song);
     }
     public void setOnItemClickListener(OnItemClickListener listener) {
+
         this.listener = listener;
     }
 }

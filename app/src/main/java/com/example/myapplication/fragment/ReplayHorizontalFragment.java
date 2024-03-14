@@ -1,5 +1,6 @@
 package com.example.myapplication.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -84,9 +85,19 @@ public class ReplayHorizontalFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_album_horizontal, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewHorizontal);
-        ListAlbumHorizontalAdapter listAlbumHorizontalFragment = new ListAlbumHorizontalAdapter(songArrayList, getContext());
-        recyclerView.setAdapter(listAlbumHorizontalFragment);
+        ListAlbumHorizontalAdapter replayHorizontalAdapter = new ListAlbumHorizontalAdapter(songArrayList, getContext());
+        recyclerView.setAdapter(replayHorizontalAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        replayHorizontalAdapter.setOnItemClickListener(new ListAlbumHorizontalAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Song song) {
+                // Xử lý sự kiện click ở đây
+                Intent intent = new Intent(getContext(), DetailSongActivity.class);
+                intent.putExtra("song_name", song.getAlbum());
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

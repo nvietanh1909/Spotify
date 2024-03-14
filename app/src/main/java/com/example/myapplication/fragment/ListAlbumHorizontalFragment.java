@@ -72,11 +72,11 @@ public class ListAlbumHorizontalFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_list_album_horizontal, container, false);
         recyclerView = view.findViewById(R.id.recyclerViewHorizontal);
-        ListAlbumHorizontalAdapter listAlbumHorizontalFragment = new ListAlbumHorizontalAdapter(songArrayList, getContext());
-        recyclerView.setAdapter(listAlbumHorizontalFragment);
+        ListAlbumHorizontalAdapter listAlbumHorizontalAdapter = new ListAlbumHorizontalAdapter(songArrayList, getContext());
+        recyclerView.setAdapter(listAlbumHorizontalAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
-        listAlbumHorizontalFragment.setOnItemClickListener(new ListAlbumHorizontalAdapter.OnItemClickListener() {
+        listAlbumHorizontalAdapter.setOnItemClickListener(new ListAlbumHorizontalAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Song song) {
                 // Xử lý sự kiện click ở đây
