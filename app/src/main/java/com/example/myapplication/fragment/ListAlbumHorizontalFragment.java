@@ -80,21 +80,13 @@ public class ListAlbumHorizontalFragment extends Fragment {
             @Override
             public void onItemClick(Song song) {
                 // Xử lý sự kiện click ở đây
-                 Intent intent = new Intent(getContext(), DetailMusicActivity.class);
-                 intent.putExtra("song_id", song.getAlbum());
+                 Intent intent = new Intent(getContext(), DetailSongActivity.class);
+                 intent.putExtra("song_name", song.getAlbum());
                  startActivity(intent);
             }
         });
-        recyclerView.setAdapter(listAlbumHorizontalFragment);
-
-        // Đặt adapter cho RecyclerView
-        recyclerView.setAdapter(listAlbumHorizontalFragment);
-
-        // Thiết lập LayoutManager cho RecyclerView (nếu cần)
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         return view;
     }
-
     void initSampleData(){
         songArrayList = new ArrayList<Song>();
         songArrayList.add(new Song("", "Obito", "Đánh đổi", 300, "Gen Z", "", "obito.jpg"));
