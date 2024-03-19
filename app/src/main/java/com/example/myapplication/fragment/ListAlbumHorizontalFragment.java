@@ -82,6 +82,7 @@ public class ListAlbumHorizontalFragment extends Fragment {
                 // Xử lý sự kiện click ở đây
                  Intent intent = new Intent(getContext(), DetailSongActivity.class);
                  intent.putExtra("song_name", song.getAlbum());
+                 intent.putExtra("song_img", song.getAlbumArt());
                  startActivity(intent);
             }
         });
@@ -89,10 +90,10 @@ public class ListAlbumHorizontalFragment extends Fragment {
     }
     void initSampleData(){
         songArrayList = new ArrayList<Song>();
-        songArrayList.add(new Song("", "Obito", "Đánh đổi", 300, "Gen Z", "", "obito.jpg"));
-        songArrayList.add(new Song("", "Wren Evans", "Loi Choi", 300, "Gen Z", "", "wrenevans.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Tlinh", "Ái", 300, "Gen Z", "", "tlinh.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", "", "mck.jpg"));
+        songArrayList.add(new Song("", "Obito", "Đánh đổi", 300, "Gen Z", R.raw.danhdoi, "obito.jpg"));
+        songArrayList.add(new Song("", "Wren Evans", "Loi Choi", 300, "Gen Z", 0, "wrenevans.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
+        songArrayList.add(new Song("", "Tlinh", "Ái", 300, "Gen Z", 0, "tlinh.jpg"));
+        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", 0, "mck.jpg"));
     }
 }

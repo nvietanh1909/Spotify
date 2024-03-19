@@ -1,16 +1,18 @@
 package com.example.myapplication.classes;
 
-public class Song {
+import java.io.Serializable;
+
+public class Song implements Serializable {
     private String title;       // Tên bài hát
     private String artist;      // Nghệ sĩ thể hiện
     private String album;       // Tên album
     private int duration;       // Thời lượng bài hát (đơn vị: giây)
     private String genre;       // Thể loại nhạc
-    private String filePath;    // Đường dẫn đến tệp nhạc trên thiết bị
+    private int filePath;    // Đường dẫn đến tệp nhạc trên thiết bị
     private String albumArt;    // Dữ liệu hình ảnh đại diện cho album (byte array)
     public Song() {
     }
-    public Song(String title, String artist, String album, int duration, String genre, String filePath, String albumArt) {
+    public Song(String title, String artist, String album, int duration, String genre, int filePath, String albumArt) {
         this.title = title;
         this.artist = artist;
         this.album = album;
@@ -59,11 +61,11 @@ public class Song {
         this.genre = genre;
     }
 
-    public String getFilePath() {
+    public int getFilePath() {
         return filePath;
     }
 
-    public void setFilePath(String filePath) {
+    public void setFilePath(int filePath) {
         this.filePath = filePath;
     }
 

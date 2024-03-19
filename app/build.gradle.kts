@@ -1,15 +1,16 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
     namespace = "com.example.myapplication"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.myapplication"
-        minSdk = 31
-        targetSdk = 33
+        minSdk = 34
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -28,9 +29,8 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
+    implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -38,6 +38,8 @@ dependencies {
 
     //Add thư viện
     //Google
-    implementation("com.google.android.gms:play-services-auth:17.0.0")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
     //Facebook
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
 }

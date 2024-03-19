@@ -81,6 +81,7 @@ public class RadioHorizontalFragment extends Fragment {
                 // Xử lý sự kiện click ở đây
                 Intent intent = new Intent(getContext(), DetailSongActivity.class);
                 intent.putExtra("song_name", song.getAlbum());
+                intent.putExtra("song_img", song.getAlbumArt());
                 startActivity(intent);
             }
         });
@@ -88,12 +89,12 @@ public class RadioHorizontalFragment extends Fragment {
     }
     private void initSampleData() {
         songArrayList = new ArrayList<Song>();
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", "", "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
+        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
     }
 
 

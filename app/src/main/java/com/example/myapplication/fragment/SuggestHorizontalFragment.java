@@ -69,12 +69,12 @@ public class SuggestHorizontalFragment extends Fragment {
 
     private void initSampleData() {
         songArrayList = new ArrayList<Song>();
-        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", "", "vacole.jpg"));
-        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", "", "vacole.jpg"));
-        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", "", "vacole.jpg"));
-        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", "", "vacole.jpg"));
-        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", "", "vacole.jpg"));
-        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", "", "vacole.jpg"));
+        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", 0, "vacole.jpg"));
+        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", 0, "vacole.jpg"));
+        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", 0, "vacole.jpg"));
+        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", 0, "vacole.jpg"));
+        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", 0, "vacole.jpg"));
+        songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", 0, "vacole.jpg"));
     }
 
     @Override
@@ -92,6 +92,7 @@ public class SuggestHorizontalFragment extends Fragment {
                 // Xử lý sự kiện click ở đây
                 Intent intent = new Intent(getContext(), DetailSongActivity.class);
                 intent.putExtra("song_name", song.getAlbum());
+                intent.putExtra("song_img", song.getAlbumArt());
                 startActivity(intent);
             }
         });
