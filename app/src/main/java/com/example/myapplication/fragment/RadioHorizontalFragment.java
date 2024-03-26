@@ -96,6 +96,4 @@ public class RadioHorizontalFragment extends Fragment {
         songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
         songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
     }
-
-
 }

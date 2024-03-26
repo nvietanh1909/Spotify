@@ -22,69 +22,32 @@ import com.google.android.gms.tasks.Task;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnLogin;
+    Button btnLogin, btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         btnLogin = findViewById(R.id.btnLogin);
+        btnRegister = findViewById(R.id.btnRegister);
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(i);
+            }
+        });
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomeActivity();
             }
         });
-
-        //Login bằng google
-        GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this,googleSignInOptions);
-        GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(this);
-        //checking if user already signed in
-        if(googleSignInAccount != null ) {
-            //open home activity
-            startActivity(new Intent(MainActivity.this,HomeActivity.class));
-            finish();
-        }
-        ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
-            @Override
-            public void onActivityResult(ActivityResult result) {
-                //get signed in account after user selected an account from google accounts dialog
-                Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(result.getData());
-                handleSignInTask(task);
-            }
-        });
-        final Button signInGGBtn = findViewById(R.id.loginGG);
-        signInGGBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent signInIntent = googleSignInClient.getSignInIntent();
-                activityResultLauncher.launch(signInIntent);
-            }
-        });
-
-        //Login bằng Facebook
-    }
-    private void handleSignInTask(Task<GoogleSignInAccount> task){
-        try {
-            GoogleSignInAccount account = task.getResult(ApiException.class);
-            //getting account data
-            final String getFullname = account.getDisplayName();
-            final String getEmail = account.getEmail();
-            final Uri getPhotoUrl = account.getPhotoUrl();
-            //opening HomeActivity
-            startActivity(new Intent(MainActivity.this,HomeActivity.class));
-            finish();
-        } catch (ApiException e) {
-            //throw new RuntimeException(e);
-            Toast.makeText(this,"Failed or Cancelled", Toast.LENGTH_SHORT).show();
-        }
     }
 
     private void openHomeActivity() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/addplaylist"
+    android:title="Thêm vào Playlist"/>
+    <item
+        android:id="@+id/viewsinger"
+        android:title="Xem nghệ sĩ"/>
+
+    <item
+        android:id="@+id/xemalbum"
+        android:title="Xem album"/>
+    <item
+        android:id="@+id/themvaodscho"
+        android:title="Thêm vào danh sách chờ"/>
+</menu>

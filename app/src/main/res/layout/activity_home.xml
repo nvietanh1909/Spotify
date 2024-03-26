@@ -52,8 +52,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="clip_vertical|start"
-        android:background="#242424"
-        app:itemTextColor="@color/text_white_color"
+        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
+        app:headerLayout="@layout/header_navigation_view"
+        android:background="@color/background"
         app:menu="@menu/menu_drawer_profile" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

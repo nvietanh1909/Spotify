@@ -1,13 +1,33 @@
 {
   "project_info": {
-    "project_number": "825513322798",
-    "project_id": "spotify-4e627",
-    "storage_bucket": "spotify-4e627.appspot.com"
+    "project_number": "134113126631",
+    "firebase_url": "https://musicapp3-cece2-default-rtdb.firebaseio.com",
+    "project_id": "musicapp3-cece2",
+    "storage_bucket": "musicapp3-cece2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:825513322798:android:bf1d183ce5b77d641932bf",
+        "mobilesdk_app_id": "1:134113126631:android:d73129cc7dcfa9a8bf9a42",
+        "android_client_info": {
+          "package_name": "com.example.musicapp3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeM6j45dcT_gs5qZ4l9uSI4ljd6nxQGuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134113126631:android:14ffb7a9fa528504bf9a42",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
@@ -15,7 +35,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDVMUHIsl1M4Jg48lMKmDWLMV2W09n6aU0"
+          "current_key": "AIzaSyBeM6j45dcT_gs5qZ4l9uSI4ljd6nxQGuE"
         }
       ],
       "services": {

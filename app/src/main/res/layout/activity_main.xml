@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    android:gravity="bottom|center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     android:paddingBottom="140dp"
     app:layoutDescription="@xml/activity_main_scene"
@@ -35,7 +35,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
@@ -43,33 +43,33 @@
             android:text="Đăng ký miễn phí"
             android:textColor="@color/background_color" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/my_button_bg"
-            android:drawableLeft="@drawable/phone_icon"
-            android:text="Tiếp tục bằng số điện thoại" />
+        <!--        <Button-->
+        <!--            android:id="@+id/button2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="4dp"-->
+        <!--            android:background="@drawable/my_button_bg"-->
+        <!--            android:drawableLeft="@drawable/phone_icon"-->
+        <!--            android:text="Tiếp tục bằng số điện thoại" />-->
 
-        <Button
-            android:id="@+id/loginGG"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/gotham_medium"
-            android:background="@drawable/my_button_bg"
-            android:drawableLeft="@drawable/google_icon"
-            android:text="Tiếp tục bằng Google" />
+        <!--        <Button-->
+        <!--            android:id="@+id/loginGG"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="4dp"-->
+        <!--            android:fontFamily="@font/gotham_medium"-->
+        <!--            android:background="@drawable/my_button_bg"-->
+        <!--            android:drawableLeft="@drawable/google_icon"-->
+        <!--            android:text="Tiếp tục bằng Google" />-->
 
-        <Button
-            android:id="@+id/loginFB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/my_button_bg"
-            android:drawableLeft="@drawable/facebook_icon"
-            android:text="Tiếp tục bằng Facebook" />
+        <!--        <Button-->
+        <!--            android:id="@+id/loginFB"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginBottom="6dp"-->
+        <!--            android:background="@drawable/my_button_bg"-->
+        <!--            android:drawableLeft="@drawable/facebook_icon"-->
+        <!--            android:text="Tiếp tục bằng Facebook" />-->
 
         <Button
             android:id="@+id/btnLogin"

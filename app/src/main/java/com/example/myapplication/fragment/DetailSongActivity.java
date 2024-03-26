@@ -28,7 +28,6 @@ public class DetailSongActivity extends AppCompatActivity {
     TextView txtBack, txtNameSong, totalTime, timeSong;
     ImageView imageView;
     SeekBar seekBar;
-
     int position = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +48,12 @@ public class DetailSongActivity extends AppCompatActivity {
         createData();
         createMediaPlayer();
         addAllEvents();
-
-        // Lấy thông tin từ Intent
         Intent intent = getIntent();
+        // Lấy thông tin từ Intent
         if (intent != null) {
             String songName = intent.getStringExtra("song_name");
             String songImg = intent.getStringExtra("song_img");
+            int songPath = intent.getIntExtra("song_path", 0);
             // Hiển thị tên bài hát
             if (songName != null && !songName.isEmpty()) {
                 txtNameSong.setText(songName);
@@ -62,6 +61,14 @@ public class DetailSongActivity extends AppCompatActivity {
             // Hiển thị thông tin trong activity
             if (songImg != null && !songImg.isEmpty()) {
                 imageView.setImageBitmap(Utils.loadBitMapFormAssets(this, songImg, "img_album"));
+            }
+            // Chơi nhạc
+            if (songPath != 0) {
+                mediaPlayer = MediaPlayer.create(this, songPath);
+                mediaPlayer.start();
+                btnPlay.setImageResource(R.drawable.baseline_pause_circle_24);
+                SetTotalTime();
+                UpdateTimeSong();
             }
         }
         txtBack.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +112,14 @@ public class DetailSongActivity extends AppCompatActivity {
                 mediaPlayer.start();
                 SetTotalTime();
                 UpdateTimeSong();
+
+                // Cập nhật tiêu đề của bài hát
+                String nextSongName = songArrayList.get(position).getAlbum();
+                txtNameSong.setText(nextSongName);
+
+                // Thay đổi hình ảnh
+                String nextSongImg = songArrayList.get(position).getAlbumArt();
+                imageView.setImageBitmap(Utils.loadBitMapFormAssets(DetailSongActivity.this, nextSongImg, "img_album"));
             }
         });
         btnBackSong.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +136,15 @@ public class DetailSongActivity extends AppCompatActivity {
                 mediaPlayer.start();
                 SetTotalTime();
                 UpdateTimeSong();
+
+
+                // Cập nhật tiêu đề của bài hát
+                String nextSongName = songArrayList.get(position).getAlbum();
+                txtNameSong.setText(nextSongName);
+
+                // Thay đổi hình ảnh
+                String nextSongImg = songArrayList.get(position).getAlbumArt();
+                imageView.setImageBitmap(Utils.loadBitMapFormAssets(DetailSongActivity.this, nextSongImg, "img_album"));
             }
         });
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -149,6 +173,8 @@ public class DetailSongActivity extends AppCompatActivity {
         songArrayList = new ArrayList<>();
         songArrayList.add(new Song("", "Obito", "Đánh đổi", 300, "Gen Z", R.raw.danhdoi, "obito.jpg"));
         songArrayList.add(new Song("", "Parys", "Vacole", 300, "Gen Z", R.raw.vacole, "vacole.jpg"));
+        songArrayList.add(new Song("", "Wren Evans", "Tò Te Tí", 300, "Gen Z", R.raw.toteti, "wrenevans.jpg"));
+        songArrayList.add(new Song("", "NIETPO", "NIETPO", 300, "Gen Z", R.raw.niefpo, "nietpo.jpg"));
     }
 
     private void SetTotalTime(){
@@ -174,10 +200,18 @@ public class DetailSongActivity extends AppCompatActivity {
                         if(mediaPlayer.isPlaying()){
                             mediaPlayer.stop();
                         }
-                        SetTotalTime();
                         createMediaPlayer();
-                        UpdateTimeSong();
                         mediaPlayer.start();
+                        SetTotalTime();
+                        UpdateTimeSong();
+
+                        // Cập nhật tiêu đề của bài hát
+                        String nextSongName = songArrayList.get(position).getAlbum();
+                        txtNameSong.setText(nextSongName);
+
+                        // Thay đổi hình ảnh
+                        String nextSongImg = songArrayList.get(position).getAlbumArt();
+                        imageView.setImageBitmap(Utils.loadBitMapFormAssets(DetailSongActivity.this, nextSongImg, "img_album"));
                     }
                 });
                 handler.postDelayed(this, 500);

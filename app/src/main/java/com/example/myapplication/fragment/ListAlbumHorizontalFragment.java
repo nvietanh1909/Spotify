@@ -80,10 +80,12 @@ public class ListAlbumHorizontalFragment extends Fragment {
             @Override
             public void onItemClick(Song song) {
                 // Xử lý sự kiện click ở đây
-                 Intent intent = new Intent(getContext(), DetailSongActivity.class);
-                 intent.putExtra("song_name", song.getAlbum());
-                 intent.putExtra("song_img", song.getAlbumArt());
-                 startActivity(intent);
+                Intent intent = new Intent(getContext(), DetailSongActivity.class);
+                intent.putExtra("song_name", song.getAlbum());
+                intent.putExtra("song_img", song.getAlbumArt());
+                intent.putExtra("song_path", song.getFilePath());
+                intent.putExtra("songArrayList", songArrayList);
+                startActivity(intent);
             }
         });
         return view;
@@ -91,9 +93,9 @@ public class ListAlbumHorizontalFragment extends Fragment {
     void initSampleData(){
         songArrayList = new ArrayList<Song>();
         songArrayList.add(new Song("", "Obito", "Đánh đổi", 300, "Gen Z", R.raw.danhdoi, "obito.jpg"));
-        songArrayList.add(new Song("", "Wren Evans", "Loi Choi", 300, "Gen Z", 0, "wrenevans.jpg"));
-        songArrayList.add(new Song("", "Oplus", "OZONE", 300, "Gen Z", 0, "oplus.jpg"));
-        songArrayList.add(new Song("", "Tlinh", "Ái", 300, "Gen Z", 0, "tlinh.jpg"));
-        songArrayList.add(new Song("", "MCK", "99%", 300, "Gen Z", 0, "mck.jpg"));
+        songArrayList.add(new Song("", "Wren Evans", "Tò Te Tí", 300, "Gen Z", R.raw.toteti, "wrenevans.jpg"));
+        songArrayList.add(new Song("", "Bray", "Mot chut thoi", 300, "Gen Z", R.raw.motchutthoi, "motchutthoi.jpg"));
+        songArrayList.add(new Song("", "KayC", "Love in the air", 300, "Gen Z", R.raw.loveintheair, "loveintheair.jpg"));
+        songArrayList.add(new Song("", "Fishy", "Vết thương", 300, "Gen Z", R.raw.vetthuong, "vetthuong.jpg"));
     }
 }
